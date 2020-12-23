@@ -1,4 +1,4 @@
-import { useState, useReducer, useCallback  } from "react";
+import {  useReducer, useCallback  } from "react";
 
 function reducer(state, action){
     switch (action.type){
@@ -9,7 +9,7 @@ function reducer(state, action){
             }
         case 'RESET':
             return Object.keys(state).reduce((acc, current) =>{
-                acc[current] ='';
+                acc[current] ='REMOVE_USER';
                 return acc;
             },{})
         default:
